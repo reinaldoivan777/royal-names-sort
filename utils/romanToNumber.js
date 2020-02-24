@@ -1,11 +1,12 @@
+// Convert Roman Number to Integer Number
 const romanToNumber = romanNumber => {
   if (romanNumber == null) return -1;
   var number = convertCharToInt(romanNumber.charAt(0));
   var previousNumber, currentNumber;
 
-  for (var i = 1; i < romanNumber.length; i++) {
-    currentNumber = convertCharToInt(romanNumber.charAt(i));
-    previousNumber = convertCharToInt(romanNumber.charAt(i - 1));
+  for (var index = 1; index < romanNumber.length; index++) {
+    currentNumber = convertCharToInt(romanNumber.charAt(index));
+    previousNumber = convertCharToInt(romanNumber.charAt(index - 1));
     if (currentNumber <= previousNumber) {
       number += currentNumber;
     } else {
@@ -16,8 +17,9 @@ const romanToNumber = romanNumber => {
   return number;
 };
 
-function convertCharToInt(c) {
-  switch (c) {
+// Convert Character to Integer
+function convertCharToInt(char) {
+  switch (char) {
     case "I":
       return 1;
     case "V":
