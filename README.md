@@ -10,3 +10,7 @@ arr (Array): The array to process.
 
 ##### Return
 Return sorted array.
+
+##### Example
+`getSortedList([George VI, William II, Elizabeth I, William I]);`  
+`// result [Elizabeth I, George VI, William I, William II]`
