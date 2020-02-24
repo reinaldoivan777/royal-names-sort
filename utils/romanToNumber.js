@@ -1,10 +1,10 @@
 // Convert Roman Number to Integer Number
 const romanToNumber = romanNumber => {
   if (romanNumber == null) return -1;
-  var number = convertCharToInt(romanNumber.charAt(0));
-  var previousNumber, currentNumber;
+  let number = convertCharToInt(romanNumber.charAt(0));
+  let previousNumber, currentNumber;
 
-  for (var index = 1; index < romanNumber.length; index++) {
+  for (let index = 1; index < romanNumber.length; index++) {
     currentNumber = convertCharToInt(romanNumber.charAt(index));
     previousNumber = convertCharToInt(romanNumber.charAt(index - 1));
     if (currentNumber <= previousNumber) {
